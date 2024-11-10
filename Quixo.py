@@ -1,8 +1,9 @@
-import API
+#import API
 
-#idul = input("Entrez votre IDUL")
-#secret = input("Entrez votre jeton personnel")
+liste_joueurs = ["valiv", "robot"]
 
-#Informations d'authentification
-idul = "valiv"
-secret = "b009f928-90fb-42c8-877f-1bb2e450ae1d"
+#formater_entête
+def formater_entête(joueur1, joueur2):
+    print("Légende:\n","X="+joueur1,"\n","O="+joueur2)
+
+formater_entête(liste_joueurs[0], liste_joueurs[1])
