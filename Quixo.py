@@ -37,13 +37,14 @@ def formater_le_damier(état_plateau):
 formater_le_damier(état_plateau)
 print(formater_le_damier(état_plateau))
 
-
-
-
-
-
-
 #Fonction formater_le_jeu (5 de 7)
+#def formater_le_jeu
+
+
+
+
+
+
 
 
 #Fonction choisir_un_coup (6 de 7)
