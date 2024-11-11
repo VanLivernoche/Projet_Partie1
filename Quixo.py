@@ -2,27 +2,26 @@
 
 joueurs = ["valiv", "robot"]
 état_jeu = " "
-plateau = [[" ", " ", "X", " ", " "],
+état_plateau = [[" ", " ", "X", " ", " "],
         [" ", " ", " ", " ", " "],
         [" ", " ", " ", " ", "O"],
         [" ", " ", " ", " ", " "],
         [" ", " ", " ", " ", " "],]
-état_plateau = {"joueurs": joueurs, "plateau": plateau}
 
 #Fonction formater_entête (3 de 7)
 def formater_entête(joueur1, joueur2):
-    print("Légende:\n","X="+joueur1,"\n","O="+joueur2)
+    format_joueurs = "Légende:\n" + "   X="+ joueur1 + "\n"+"   O="+joueur2
+    return format_joueurs 
 
-formater_entête(joueurs[0], joueurs[1])
+#print(formater_entête(joueurs[0], joueurs[1]))
 
 #Fonction formater_le_damier (4 de 7)
 def formater_le_damier(état_plateau):
-    plateau = état_plateau.get("plateau")
     nb = 1
     newligne = ""
     plateau_ascii = "   -------------------\n"
 
-    for ligne in plateau:
+    for ligne in état_plateau:
           newligne = " | ".join(str(case) for case in ligne)
         
           if nb <= 4:
@@ -35,10 +34,17 @@ def formater_le_damier(état_plateau):
               
     return plateau_ascii
 formater_le_damier(état_plateau)
-print(formater_le_damier(état_plateau))
+#print(formater_le_damier(état_plateau))
 
 #Fonction formater_le_jeu (5 de 7)
-#def formater_le_jeu
+def formater_le_jeu(joueurs, état_plateau):
+    joueur1 = joueurs[0]
+    joueur2 = joueurs[1]
+    print(formater_entête(joueur1, joueur2))
+    print(formater_le_damier(état_plateau))
+
+
+formater_le_jeu(joueurs, état_plateau)
 
 
 
