@@ -46,15 +46,25 @@ def formater_le_jeu(joueurs, état_plateau):
 
 formater_le_jeu(joueurs, état_plateau)
 
-
-
-
-
-
-
-
 #Fonction choisir_un_coup (6 de 7)
+Q1 = tuple(input("Donnez la position d'origine du cube (x,y) :"))
+Q2 = input("Quelle direction voulez-vous insérer? ('haut', 'bas', 'gauche', 'droite') :")
+# Q1 = (2,5)
+# Q2 = "bas"
 
+def choisir_un_coup(origine, direction):
+   #tuple    
+    #liste position
+    list_origine = list(origine)
+    position = [int(list_origine[0]), int(list_origine[2])]
+
+    #chaine direction
+    if direction == "haut" or "bas" or "gauche" or "droite":
+        direction = str(direction)
+
+    return position, direction
+
+print(choisir_un_coup(Q1, Q2))
 
 
 #Fonction interpréter_la_commande (7 de 7)
